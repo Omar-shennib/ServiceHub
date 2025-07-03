@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: white;
+}
+.gg{
+  color: white;
+  background-color: rgba(16, 65, 107, 0.84);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 19rem;
+  height: 6rem;
+  border-radius: 28px;
+  padding: 25px;
+  gap: 1.2rem;
+}
+.gg p{
+  font-size:13px ;
+  padding-left: 0.4rem;
+}
+ .subjects{
+   display: flex;
+  justify-content: center;
+   padding-top: 10rem;
+   gap: 2.7rem;
+ }
+.jobs{
+display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 28rem;
+
+
+}
+.jobsd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+
+
+}
+.jobs a{
+  background-color: #f6f6f6;
+  color: black;
+  text-decoration: none;
+  height: 3.8em;
+  align-content: center;
+  border-radius: 10px;
+  padding-left: 1rem;
+  font-size: 13px;
+transition-duration: 0.19s;
+
+}
+
+.jobs a:hover{
+ scale: 1.05;
+  background-color: #10416b;
+  color: white;
+}
+
+.jobs a.selected, .jobs a.selected:hover {
+  background-color: #10416b;
+  color: white;
+}
+
+
+.jobsbtn{
+  display: flex;
+  gap: 1rem;
+}
+.jobsbtn a{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  height: 3.6em;
+  width: 8rem;
+  align-content: center;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.jobsbtn a:last-child {
+  box-shadow: 0 0 0px #10416b;
+  transition: box-shadow 0.2s, filter 0.2s;
+}
+.jobsbtn a:last-child:hover {
+  box-shadow: 0 0 10px 2px #10416b;
+  filter: brightness(1.1);
+}
+.jobs a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem; /* Space for checkbox */
+}
+
+.job-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.job-checkbox:checked {
+  background-color: #10416b;
+  border-color: #10416b;
+}
+
+.job-checkbox:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
