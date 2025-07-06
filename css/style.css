@@ -1,247 +1,512 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+:root {
+  --primary-dark: #10416b;
+  --primary-light: #008dff;
+  --light-color: #fff;
+  --dark-color: #333;
+  --text-light: #666;
+  --grey-light-bg: #f9f9f9;
+  --grey-border: #e0e0e0;
+  --star-color: #ffc107;
+}
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
+/* Global & Navbar Styles */
+body {
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
+nav {
+  background: #fff;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
+.logo {
+  transition: transform 0.2s ease;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+.logo:hover {
+  transform: translateY(-3px);
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
+.logo img {
+  height: 100px;
   width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+.links {
+  display: flex;
+  gap: 5rem;
+  font-weight: bold;
 
-.invisible {
-  visibility: hidden;
+}
+.links a {
+  color: #10416b;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+.links a:hover {
+  color: #008dff;
 }
 
-.clearfix::after {
-  clear: both;
+.sign-in {
+  font-weight: bold;
+  color: #10416b;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-right: 3rem;
+  transition: color 0.2s ease;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+.sign-in:hover {
+  color: #008dff;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+.provider {
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  background-color: #10416b;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.provider:hover {
+  background-color: #031628;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+/* Home Section */
+.home-section {
+  background-image: url('../img/ChatGPT Image Jul 3, 2025 at 11_38_03 PM.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  min-height: 60vh;
+  position: relative;
+}
+
+.home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  padding: 15px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #10416b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.section-title {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10rem 0 4rem 0;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.cards {
+  background-color: #10416b;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem 4rem 2rem;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  width: 220px;
+  height: 260px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}
+
+.card-content {
+  flex-grow: 1; /* Allows content to fill space */
+}
+
+.card h3 {
+  color: #10416b;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Staff Section */
+.staff-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.staff-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.staff-card {
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.staff-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.staff-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #e0e0e0;
+}
+
+.staff-card h3 {
+  margin: 0.5rem 0;
+  color: #10416b;
+}
+
+.staff-job {
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.star-rating span {
+  color: #ffc107;
+  font-size: 1.5rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
+  width: 300px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid #008dff;
+}
+
+.testimonial-author {
+  margin-top: auto;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  color: #10416b;
+}
+
+/* About Section */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about-column {
+  flex: 1;
+}
+
+.about-column h3 {
+  font-size: 1.5rem;
+  color: #10416b;
+  margin-bottom: 1rem;
+}
+
+.about-column p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+}
+
+.contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #10416b;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #10416b;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #031628;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #10416b;
+  color: white;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.footer-content-simple {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  height: 45px;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #008dff;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* 11. RESPONSIVE & RTL STYLES */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  .links {
+    order: 1;
+    margin-top: 10px;
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
+  .about-grid, .contact-grid {
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .card {
+    width: 90vw;
+    max-width: 350px;
+  }
+}
+
+/* 11. RTL Overrides */
+[dir="rtl"] .section-title::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .testimonial-text {
+  padding-left: 0;
+  padding-right: 20px;
+  border-left: none;
+  border-right: 3px solid var(--primary-light);
+}
+
+[dir="rtl"] nav .sign-in {
+  margin-right: 0;
+  margin-left: 1.5rem;
+}

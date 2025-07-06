@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعلمون - ServiceHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/professionals.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="ServiceHub Logo"></a>
+    <div class="links">
+      <a href="index.html#home">الرئيسية</a>
+      <a href="index.html#about">من نحن</a>
+      <a href="index.html#contact">تواصل معنا</a>
+      <a href="bookNow.html">احجز الان</a>
+    </div>
+    <div class="auth-links">
+      <a href="login.html" class="sign-in">تسجيل الدخول</a>
+      <a href="login-provider.html" class="provider">الدخول كمقدم خدمة</a>
+    </div>
+  </nav>
+
+  <header class="page-header teachers-header">
+    <div class="header-content">
+      <div class="context">
+      <h1>قائمة المعلمين</h1>
+      <p>ابحث عن المعلم المناسب لك واختر من بين أفضل الأساتذة.</p>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="filter-container">
+      <label for="specialty-filter">تصفية حسب المادة:</label>
+      <select id="specialty-filter">
+        <option value="all">الكل</option>
+        <option value="math">رياضيات</option>
+        <option value="physics">فيزياء</option>
+        <option value="chemistry">كيمياء</option>
+        <option value="arabic">لغة عربية</option>
+        <option value="biology">علم الأحياء</option>
+      </select>
+    </div>
+
+    <section class="professionals-grid">
+      <!-- Teacher Card -->
+      <div class="professional-card" data-specialty="math">
+        <img src="img/teacherF4.png" alt="الأستاذة مريم خليل" class="professional-img">
+        <div class="professional-info">
+          <h3>الأستاذة مريم خليل</h3>
+          <p class="specialty">أستاذة في الرياضيات</p>
+          <div class="rating">★★★★★</div>
+          <a href="bookNow.html?service=teacher&provider=الأستاذة مريم خليل&specialty=أستاذة في الرياضيات" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Teacher Card -->
+      <div class="professional-card" data-specialty="physics">
+        <img src="img/teacherM1.png" alt="الأستاذ علي حسن" class="professional-img">
+        <div class="professional-info">
+          <h3>الأستاذ علي حسن</h3>
+          <p class="specialty">أستاذ في الفيزياء</p>
+          <div class="rating">★★★★☆</div>
+          <a href="bookNow.html?service=teacher&provider=الأستاذ علي حسن&specialty=أستاذ في الفيزياء" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Teacher Card -->
+      <div class="professional-card" data-specialty="chemistry">
+        <img src="img/teacherF1.png" alt="الأستاذة فاطمة أحمد" class="professional-img">
+        <div class="professional-info">
+          <h3>الأستاذة فاطمة أحمد</h3>
+          <p class="specialty">��ستاذة في الكيمياء</p>
+          <div class="rating">★★★★★</div>
+          <a href="bookNow.html?service=teacher&provider=الأستاذة فاطمة أحمد&specialty=أستاذة في الكيمياء" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Teacher Card -->
+      <div class="professional-card" data-specialty="arabic">
+        <img src="img/teacherM2.png" alt="الأستاذ محمد عبد الله" class="professional-img">
+        <div class="professional-info">
+          <h3>الأستاذ محمد عبد الله</h3>
+          <p class="specialty">أستاذ في اللغة العربية</p>
+          <div class="rating">★★★★☆</div>
+          <a href="bookNow.html?service=teacher&provider=الأستاذ محمد عبد الله&specialty=أستاذ في اللغة العربية" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Teacher Card -->
+      <div class="professional-card" data-specialty="biology">
+        <img src="img/teacherF2.png" alt="الأستاذة سارة إبراهيم" class="professional-img">
+        <div class="professional-info">
+          <h3>الأستاذة سارة إبراهيم</h3>
+          <p class="specialty">أستاذة في علم الأحياء</p>
+          <div class="rating">★★★★★</div>
+          <a href="bookNow.html?service=teacher&provider=الأستاذة سارة إبراهيم&specialty=أستاذة في علم الأحياء" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content-simple">
+      <div class="footer-logo">
+        <a href="index.html"><img src="img/logo.png" alt="ServiceHub Logo"></a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#home">الرئيسية</a>
+        <a href="index.html#about">من نحن</a>
+        <a href="index.html#contact">تواصل معنا</a>
+      </div>
+      <p class="footer-copyright">&copy; 2025 ServiceHub. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/professionals.js"></script>
+</body>
+</html>

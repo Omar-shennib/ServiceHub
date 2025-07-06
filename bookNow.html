@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>احجز موعدك - ServiceHub</title>
+  <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+  <div class="booking-page-container">
+    <div class="booking-form-wrapper">
+      <div class="booking-header">
+        <a href="index.html" class="booking-logo"><img src="img/logo.png" alt="ServiceHub Logo"></a>
+        <h2>احجز خدمتك الآن</h2>
+        <p>املأ النموذج أدناه لإكمال حجزك. فريقنا سيتواصل معك للتأكيد.</p>
+      </div>
+
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="fullName">الاسم الكامل</label>
+          <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">رقم الهاتف</label>
+          <div class="phone-input-container">
+            <input type="tel" id="phone" name="phone" placeholder="9X XXX XXXX" required>
+            <span class="country-code">+218</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">اختر الخدمة</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected> اختر نوع الخدمة </option>
+            <option value="doctor">طبيب</option>
+            <option value="teacher">معلم</option>
+            <option value="plumber">سباك</option>
+            <option value="barber">حلاق</option>
+            <option value="electrician">كهربائي</option>
+            <option value="chef">طاهٍ</option>
+            <option value="photographer">مصور</option>
+            <option value="mechanic">ميكانيكي</option>
+            <option value="personal-trainer">مدرب شخصي</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="provider">اختر مقدم الخدمة</label>
+          <select id="provider" name="provider" required>
+            <option value="" disabled selected>-- اختر مقدم الخدمة المفضل --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">التاريخ المفضل</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">ملاحظات إضافية</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="أخبرنا بأي تفاصيل إضافية هنا..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit-booking">تأكيد الحجز</button>
+        <a href="index.html" class="btn-back">العودة للصفحة الرئيسية</a>
+      </form>
+    </div>
+  </div>
+
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+      <p>هل أنت متأكد أنك تريد تأكيد حجزك؟</p>
+      <button id="confirm-btn" class="btn-confirm">تأكيد</button>
+      <button id="decline-btn" class="btn-decline">إلغاء</button>
+    </div>
+  </div>
+
+  <script src="js/providers.js"></script>
+  <script src="js/booking.js?v=1.1"></script>
+</body>
+</html>

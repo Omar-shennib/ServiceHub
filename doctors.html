@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأطباء - ServiceHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/professionals.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="ServiceHub Logo"></a>
+    <div class="links">
+      <a href="index.html#home">الرئيسية</a>
+      <a href="index.html#about">من نحن</a>
+      <a href="index.html#contact">تواصل معنا</a>
+      <a href="bookNow.html">احجز الان</a>
+    </div>
+    <div class="auth-links">
+      <a href="login.html" class="sign-in">تسجيل الدخول</a>
+      <a href="login-provider.html" class="provider">الدخول كمقدم خدمة</a>
+    </div>
+  </nav>
+
+  <header class="page-header doctors-header">
+    <div class="header-content">
+      <div class="context">
+        <h1>قائمة الأطباء</h1>
+        <p>ابحث عن الطبيب المناسب لك واختر من بين أفضل الأخصائيين.</p>
+      </div>
+
+    </div>
+  </header>
+  <main class="container">
+
+    <div class="filter-container">
+      <label for="specialty-filter">تصفية حسب التخصص:</label>
+      <select id="specialty-filter">
+        <option value="all">الكل</option>
+        <option value="cardiology">قلب</option>
+        <option value="dermatology">جلدية</option>
+        <option value="pediatrics">أطفال</option>
+        <option value="neurology">أعصاب</option>
+      </select>
+    </div>
+
+    <section class="professionals-grid">
+      <!-- Doctor Card -->
+      <div class="professional-card" data-specialty="cardiology">
+        <img src="img/docM1.png" alt="الدكتور خالد يوسف" class="professional-img">
+        <div class="professional-info">
+          <h3>الدكتور خالد يوسف</h3>
+          <p class="specialty">أخصائي أمراض القلب</p>
+          <div class="rating">★★★★☆</div>
+          <a href="bookNow.html?service=doctor&provider=الدكتور خالد يوسف&specialty=أخصائي أمراض القلب" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Doctor Card -->
+      <div class="professional-card" data-specialty="dermatology">
+        <img src="img/docF1.png" alt="الدكتورة منى الشاذلي" class="professional-img">
+        <div class="professional-info">
+          <h3>الدكتورة منى الشاذلي</h3>
+          <p class="specialty">أخصائية الأمراض الجلدية</p>
+          <div class="rating">★★★★★</div>
+          <a href="bookNow.html?service=doctor&provider=الدكتورة منى الشاذلي&specialty=أخصائية الأمراض الجلدية" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Doctor Card -->
+      <div class="professional-card" data-specialty="pediatrics">
+        <img src="img/docM4.png" alt="الدكتور أ��مد سعيد" class="professional-img">
+        <div class="professional-info">
+          <h3>الدكتور أحمد سعيد</h3>
+          <p class="specialty">أخصائي طب الأطفال</p>
+          <div class="rating">★★★★☆</div>
+          <a href="bookNow.html?service=doctor&provider=الدكتور أحمد سعيد&specialty=أخصائي طب الأطفال" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+      <!-- Doctor Card -->
+      <div class="professional-card" data-specialty="neurology">
+        <img src="img/docF5.png" alt="الدكتورة هدى فهمي" class="professional-img">
+        <div class="professional-info">
+          <h3>الدكتورة هدى فهمي</h3>
+          <p class="specialty">أخصائية الأعصاب</p>
+          <div class="rating">★★★★★</div>
+          <a href="bookNow.html?service=doctor&provider=الدكتورة هدى فهمي&specialty=أخصائية الأعصاب" class="btn-book">احجز الآن</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content-simple">
+      <div class="footer-logo">
+        <a href="index.html"><img src="img/logo.png" alt="ServiceHub Logo"></a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#home">الرئيسية</a>
+        <a href="index.html#about">من نحن</a>
+        <a href="index.html#contact">تواصل معنا</a>
+      </div>
+      <p class="footer-copyright">&copy; 2025 ServiceHub. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/professionals.js"></script>
+</body>
+</html>
