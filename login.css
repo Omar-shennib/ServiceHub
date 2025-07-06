@@ -81,6 +81,10 @@ body{
 gap: 6rem;
   padding-right: 5rem;
 }
+
+.login0 .subjects{
+  gap: 3rem;
+}
 .gg li {
   padding-bottom: 0.3rem;
 }
