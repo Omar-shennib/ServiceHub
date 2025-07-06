@@ -12,3 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+const uploadBox = document.getElementById('uploadBox');
+const fileInput = document.getElementById('fileInput');
+const previewImage = document.getElementById('previewImage');
+const uploadIcon = document.getElementById('uploadIcon');
+const uploadText = document.getElementById('uploadText');
+
+uploadBox.addEventListener('click', () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', () => {
+  const file = fileInput.files[0];
+  if (file && file.type.startsWith('image/')) {
+    const reader = new FileReader();
+    reader.onload = e => {
+      previewImage.src = e.target.result;
+      previewImage.style.display = 'block';
+      uploadIcon.style.display = 'none';
+      uploadText.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+  }
+});
