@@ -36,3 +36,12 @@ fileInput.addEventListener('change', () => {
     reader.readAsDataURL(file);
   }
 });
+
+const submitBtn = document.getElementById('submitBtn');
+if (submitBtn) {
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('تم إرسال بياناتك بنجاح إلى فريق الإدارة. سنقوم بمراجعتها والتواصل معك في أقرب وقت ممكن');
+    window.location.href = 'index.html';
+  });
+}
