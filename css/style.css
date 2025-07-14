@@ -514,7 +514,7 @@ nav {
     flex-direction: column;
     gap: 1.2rem;
     align-items: center;
-    width: 80%;
+    width: 50%;
   }
 
   .auth-links {
@@ -522,7 +522,7 @@ nav {
   }
 
   .provider {
-    width: 30%;
+    width: 10%;
     text-align: center;
   }
 }
