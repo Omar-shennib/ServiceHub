@@ -54,7 +54,7 @@ nav {
   display: flex;
   gap: 5rem;
   font-weight: bold;
-  margin-right: 10rem;
+  margin-right: 5rem;
 }
 .links a {
   color: #10416b;
@@ -95,7 +95,7 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   min-height: 60vh;
   position: relative;
 }
@@ -224,6 +224,9 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .staff-card {
@@ -448,6 +451,13 @@ nav {
 }
 
 /* 11. RESPONSIVE & RTL STYLES */
+@media (max-width: 1200px) {
+  .links {
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -458,6 +468,14 @@ nav {
   .links {
     order: 1;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .auth-links {
+    margin-top: 15px;
   }
 
   .about-grid, .contact-grid {
@@ -503,5 +521,3 @@ nav {
 [dir="rtl"] nav .provider {
   margin-left: 1rem;
 }
-
-
