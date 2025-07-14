@@ -263,6 +263,10 @@ nav {
   font-size: 1.5rem;
 }
 
+ #white-star {
+  color: #888888;
+}
+
 /* Testimonials Section */
 .testimonials-section {
   background-color: #f9f9f9;
