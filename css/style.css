@@ -50,6 +50,12 @@ nav {
   width: auto;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
 .links {
   display: flex;
   gap: 5rem;
@@ -83,6 +89,23 @@ nav {
 .provider:hover {
   background-color: #031628;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: var(--primary-dark);
+  margin: 5px 0;
+  transition: 0.3s;
 }
 
 /* Home Section */
@@ -450,63 +473,62 @@ nav {
   color: #ccc;
 }
 
-/* 11. RESPONSIVE & RTL STYLES */
 @media (max-width: 1200px) {
-  .links {
+  .nav-links, .links {
     gap: 2rem;
-    margin-right: 2rem;
   }
 }
 
+
+/* --- Styles for Mobile Screens (Corrected) --- */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  /* 1. Hide the navigation links by default on mobile */
+  .nav-links {
+    display: none; /* This is the key change to hide the links */
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 10px 15px;
+    gap: 1.5rem;
+    background-color: #fff;
+    position: absolute;
+    top: 85px; /* Adjust this based on your nav height */
+    right: 0;
+    left: 0;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000; /* Ensures menu appears on top of other content */
   }
 
-  .logo img {
-    height: 50px;
-  }
-
-  .links {
+  /* 2. This class will be added by JavaScript to show the menu when the hamburger is clicked */
+  .nav-links.active {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    margin-right: 0;
   }
 
-  .links a {
-    font-size: 14px;
+  /* 3. Ensure the hamburger menu icon is visible on mobile */
+  .hamburger {
+    display: block; /* This makes the menu icon appear */
+    cursor: pointer; /* Makes it look clickable */
+  }
+
+  /* These rules were inside .nav-links, they should be separate */
+  .links {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    width: 80%;
   }
 
   .auth-links {
-    text-align: center;
-    flex-shrink: 0;
+    margin-top: 1rem;
   }
 
   .provider {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .about-grid, .contact-grid {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 1.5rem;
+    width: 30%;
+    text-align: center;
   }
 }
 
+
+/* Styles for very small screens (no changes needed here) */
 @media (max-width: 700px) {
   .cards {
     flex-direction: column;
@@ -518,7 +540,8 @@ nav {
   }
 }
 
-/* 11. RTL Overrides */
+
+/* --- RTL Overrides (Corrected) --- */
 [dir="rtl"] .section-title::after {
   left: auto;
   right: 50%;
@@ -532,8 +555,10 @@ nav {
   border-right: 3px solid var(--primary-light);
 }
 
+/* 4. This is the corrected rule for the login button in RTL */
 [dir="rtl"] nav .auth-links {
-  margin-right: auto;
+  margin-left: auto;  /* This pushes the button to the far left */
+  margin-right: 0;   /* This removes the incorrect right margin */
 }
 
 [dir="rtl"] nav .provider {
