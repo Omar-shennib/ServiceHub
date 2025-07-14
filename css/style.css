@@ -466,8 +466,6 @@ nav {
   }
 
   .links {
-    order: 1;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -475,7 +473,7 @@ nav {
   }
 
   .auth-links {
-    margin-top: 15px;
+    text-align: center;
   }
 
   .about-grid, .contact-grid {
