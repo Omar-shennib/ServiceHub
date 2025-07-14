@@ -485,7 +485,7 @@ nav {
   /* 1. Hide the navigation links by default on mobile */
   .nav-links {
     display: none; /* This is the key change to hide the links */
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1.5rem;
     background-color: #fff;
