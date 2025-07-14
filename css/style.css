@@ -482,47 +482,46 @@ nav {
 
 /* --- Styles for Mobile Screens (Corrected) --- */
 @media (max-width: 768px) {
-  /* 1. Hide the navigation links by default on mobile */
   .nav-links {
-    display: none; /* This is the key change to hide the links */
-    flex-direction: row;
+    display: none;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     background-color: #fff;
     position: absolute;
     top: 85px; /* Adjust this based on your nav height */
     right: 0;
     left: 0;
-    padding: 2rem;
+    padding: 1rem 2rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    z-index: 1000; /* Ensures menu appears on top of other content */
   }
 
-  /* 2. This class will be added by JavaScript to show the menu when the hamburger is clicked */
   .nav-links.active {
     display: flex;
   }
 
-  /* 3. Ensure the hamburger menu icon is visible on mobile */
   .hamburger {
     display: block; /* This makes the menu icon appear */
     cursor: pointer; /* Makes it look clickable */
   }
 
-  /* These rules were inside .nav-links, they should be separate */
   .links {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
+    margin-right: 0;
     align-items: center;
-    font-size: -50%;
+  }
+
+  .links a {
+    font-size: 16px;
   }
 
   .auth-links {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .provider {
-    font-size: -70%;
+    width: 100%;
     text-align: center;
   }
 }
