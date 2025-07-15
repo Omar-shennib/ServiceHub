@@ -9,16 +9,23 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="logo"><img src="img/logo.png" alt="ServiceHub Logo"></a>
-    <div class="links">
+    <button class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <a href="index.html#home">الرئيسية</a>
       <a href="index.html#about">من نحن</a>
       <a href="index.html#contact">تواصل معنا</a>
-      <a href="bookNow.html">احجز الان</a>
     </div>
-    <div class="auth-links">
+
+    <div class="center-nav-links">
+      <a href="bookNow.html">احجز الان</a>
       <a href="login0.html" class="provider">الدخول كمقدم خدمة</a>
     </div>
+
+    <a href="index.html" class="logo"><img src="img/logo.png" alt="ServiceHub Logo"></a>
   </nav>
 
   <header class="page-header doctors-header">
@@ -69,8 +76,8 @@
         <img src="img/docM4.png" alt="الدكتور أ��مد سعيد" class="professional-img">
         <div class="professional-info">
           <h3>الدكتور أحمد سعيد</h3>
-          <p class="specialty">أخصائي طب الأطفال</p>
-          <div class="rating">★★★★☆</div>
+          <p class="specialty">أخصائي طب ال��طفال</p>
+          <div class="rating">★���★★☆</div>
           <a href="bookNow.html?service=doctor&provider=الدكتور أحمد سعيد&specialty=أخصائي طب الأطفال" class="btn-book">احجز الآن</a>
         </div>
       </div>
@@ -86,21 +93,7 @@
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-content-simple">
-      <div class="footer-logo">
-        <a href="index.html"><img src="img/logo.png" alt="ServiceHub Logo"></a>
-      </div>
-      <div class="footer-links">
-        <a href="index.html#home">الرئيسية</a>
-        <a href="index.html#about">من نحن</a>
-        <a href="index.html#contact">تواصل معنا</a>
-      </div>
-      <p class="footer-copyright">&copy; 2025 ServiceHub. جميع الحقوق محفوظة.</p>
-    </div>
-  </footer>
-
+  <script src="js/app.js"></script>
   <script src="js/professionals.js"></script>
-</body>
+  </body>
 </html>
