@@ -199,54 +199,33 @@ text-align: right;
 }
 .jobsbtn a{
 display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  height: 3.6em;
+  width: 8rem;
+  align-content: center;
+  border-radius: 20px;
+  font-size: 12px;
 }
+.jobsbtn a:last-child {
+  box-shadow: 0 0 0px #10416b;
+  transition: box-shadow 0.2s, filter 0.2s;
+}
+.jobsbtn a:last-child:hover {
+  box-shadow: 0 0 10px 2px #10416b;
+  filter: brightness(1.1);
+}
+.jobs button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  border: none;
+  cursor: pointer;
 
-/* --- Responsive Styles for Mobile --- */
-@media (max-width: 768px) {
-  .subjects {
-    flex-direction: column;
-    padding-top: 2rem;
-    align-items: center;
-    gap: 2rem;
-    /* Override inline styles from HTML */
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
 
-  .gg,
-  .jobs,
-  .jobsd {
-    width: 90%;
-    max-width: 100%;
-    height: auto; /* Let height adjust to content */
-    margin: 0;
-  }
-
-  .jobsd {
-    gap: 2rem;
-  }
-
-  .login0 .jobsd input,
-  .jobsd textarea {
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in width */
-  }
-
-  .login0 .logdsps {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .login0 .logindetails p {
-    text-align: right;
-    padding-bottom: 0.5rem;
-  }
-
-  .jobsbtn {
-    width: 100%;
-    justify-content: space-between;
-  }
 }
 
 .job-checkbox {
@@ -326,3 +305,4 @@ display: flex;
 input[type="file"] {
   display: none;
 }
+
