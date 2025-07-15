@@ -208,15 +208,18 @@ display: flex;
     padding-top: 2rem;
     align-items: center;
     gap: 2rem;
-    padding-right: 0 !important; /* Override inline styles */
+    /* Override inline styles from HTML */
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   .gg,
   .jobs,
   .jobsd {
     width: 90%;
-    max-width: 28rem;
+    max-width: 100%;
     height: auto; /* Let height adjust to content */
+    margin: 0;
   }
 
   .jobsd {
@@ -244,17 +247,6 @@ display: flex;
     width: 100%;
     justify-content: space-between;
   }
-}
-
-.jobs button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1rem;
-  border: none;
-  cursor: pointer;
-
-
 }
 
 .job-checkbox {
